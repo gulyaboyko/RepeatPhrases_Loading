@@ -15,5 +15,5 @@ struct LoadedAudio {
 }
 
 protocol AudioLoader {
-    func get(completion: (Result<[LoadedAudio], Error>) -> Void)
+    func get(completion: @escaping (Result<[LoadedAudio], Error>) -> Void)
 }

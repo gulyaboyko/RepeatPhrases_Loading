@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */; };
 		AE689B5623C7473200323583 /* AudioLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5523C7473200323583 /* AudioLoader.swift */; };
+		AE689B5923C7482A00323583 /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5823C7482A00323583 /* RemoteLoader.swift */; };
+		AE689B5B23C756D900323583 /* RemoteLoaderMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */; };
+		AE689B5D23C756F300323583 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5C23C756F300323583 /* HTTPClient.swift */; };
+		AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06223C757CF0051A359 /* URLSessionClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 		AE689B4323C7469400323583 /* RepeatPhrases_LoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatPhrases_LoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE689B4A23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE689B5523C7473200323583 /* AudioLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLoader.swift; sourceTree = "<group>"; };
+		AE689B5823C7482A00323583 /* RemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoader.swift; sourceTree = "<group>"; };
+		AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoaderMapper.swift; sourceTree = "<group>"; };
+		AE689B5C23C756F300323583 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		AEBBB06223C757CF0051A359 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		AE689B3C23C7469400323583 /* RepeatPhrases_Loading */ = {
 			isa = PBXGroup;
 			children = (
+				AE689B5723C7480E00323583 /* API */,
 				AE689B5423C746EF00323583 /* Feature */,
 				AE689B3E23C7469400323583 /* Info.plist */,
 			);
@@ -89,6 +98,17 @@
 				AE689B5523C7473200323583 /* AudioLoader.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		AE689B5723C7480E00323583 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AE689B5823C7482A00323583 /* RemoteLoader.swift */,
+				AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */,
+				AE689B5C23C756F300323583 /* HTTPClient.swift */,
+				AEBBB06223C757CF0051A359 /* URLSessionClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE689B5923C7482A00323583 /* RemoteLoader.swift in Sources */,
+				AE689B5B23C756D900323583 /* RemoteLoaderMapper.swift in Sources */,
+				AE689B5D23C756F300323583 /* HTTPClient.swift in Sources */,
 				AE689B5623C7473200323583 /* AudioLoader.swift in Sources */,
+				AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
