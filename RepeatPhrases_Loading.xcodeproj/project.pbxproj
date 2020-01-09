@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */; };
-		AE689B4923C7469400323583 /* RepeatPhrases_LoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B4823C7469400323583 /* RepeatPhrases_LoadingTests.swift */; };
-		AE689B4B23C7469400323583 /* RepeatPhrases_Loading.h in Headers */ = {isa = PBXBuildFile; fileRef = AE689B3D23C7469400323583 /* RepeatPhrases_Loading.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,10 +22,8 @@
 
 /* Begin PBXFileReference section */
 		AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepeatPhrases_Loading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE689B3D23C7469400323583 /* RepeatPhrases_Loading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepeatPhrases_Loading.h; sourceTree = "<group>"; };
 		AE689B3E23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE689B4323C7469400323583 /* RepeatPhrases_LoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatPhrases_LoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE689B4823C7469400323583 /* RepeatPhrases_LoadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatPhrases_LoadingTests.swift; sourceTree = "<group>"; };
 		AE689B4A23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +67,6 @@
 		AE689B3C23C7469400323583 /* RepeatPhrases_Loading */ = {
 			isa = PBXGroup;
 			children = (
-				AE689B3D23C7469400323583 /* RepeatPhrases_Loading.h */,
 				AE689B3E23C7469400323583 /* Info.plist */,
 			);
 			path = RepeatPhrases_Loading;
@@ -80,7 +75,6 @@
 		AE689B4723C7469400323583 /* RepeatPhrases_LoadingTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE689B4823C7469400323583 /* RepeatPhrases_LoadingTests.swift */,
 				AE689B4A23C7469400323583 /* Info.plist */,
 			);
 			path = RepeatPhrases_LoadingTests;
@@ -93,7 +87,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE689B4B23C7469400323583 /* RepeatPhrases_Loading.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE689B4923C7469400323583 /* RepeatPhrases_LoadingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
