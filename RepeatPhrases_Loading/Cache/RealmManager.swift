@@ -31,6 +31,14 @@ struct RealmManager: CacheSaver {
             completion(.failure(error))
         }
     }
+    func getNotDownloadedAudio(completion: (Result<[LoadedAudio], Error>) -> Void) {
+        do {
+            let audioRealm: [AudioRealm] = try AudioRealm.find("isDownloaded = false")
+            completion(.success(audioRealm.toModels()))
+        } catch (let error) {
+            completion(.failure(error))
+        }
+    }
 }
 
 extension Array where Element == LoadedAudio {
@@ -42,5 +50,11 @@ extension Array where Element == LoadedAudio {
             audioRealm.audioPath = localAudio.audioPath
             return audioRealm
         }
+    }
+}
+
+extension Array where Element == AudioRealm {
+    func toModels() -> [LoadedAudio] {
+        return map { LoadedAudio(id: $0.id, text: $0.text, audioPath: $0.audioPath)}
     }
 }

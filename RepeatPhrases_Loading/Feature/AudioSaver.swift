@@ -10,4 +10,5 @@ import Foundation
 
 protocol AudioSaver {
     func save(_ items: [LoadedAudio], completion: (Result<Void, Error>) -> Void)
+    func getNotDownloadedAudio(completion: (Result<[LoadedAudio], Error>) -> Void)
 }
