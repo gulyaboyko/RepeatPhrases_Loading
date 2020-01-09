@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */; };
+		AE689B5623C7473200323583 /* AudioLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5523C7473200323583 /* AudioLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,7 @@
 		AE689B3E23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE689B4323C7469400323583 /* RepeatPhrases_LoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatPhrases_LoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE689B4A23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE689B5523C7473200323583 /* AudioLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		AE689B3C23C7469400323583 /* RepeatPhrases_Loading */ = {
 			isa = PBXGroup;
 			children = (
+				AE689B5423C746EF00323583 /* Feature */,
 				AE689B3E23C7469400323583 /* Info.plist */,
 			);
 			path = RepeatPhrases_Loading;
@@ -78,6 +81,14 @@
 				AE689B4A23C7469400323583 /* Info.plist */,
 			);
 			path = RepeatPhrases_LoadingTests;
+			sourceTree = "<group>";
+		};
+		AE689B5423C746EF00323583 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AE689B5523C7473200323583 /* AudioLoader.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				TargetAttributes = {
 					AE689B3923C7469400323583 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					AE689B4223C7469400323583 = {
 						CreatedOnToolsVersion = 11.3;
@@ -188,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE689B5623C7473200323583 /* AudioLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +345,7 @@
 		AE689B4F23C7469400323583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UBR9UU276M;
@@ -348,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gulyaboiko.RepeatPhrases-Loading";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,6 +371,7 @@
 		AE689B5023C7469400323583 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UBR9UU276M;
@@ -380,6 +396,7 @@
 		AE689B5223C7469400323583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBR9UU276M;
 				INFOPLIST_FILE = RepeatPhrases_LoadingTests/Info.plist;
@@ -398,6 +415,7 @@
 		AE689B5323C7469400323583 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBR9UU276M;
 				INFOPLIST_FILE = RepeatPhrases_LoadingTests/Info.plist;
