@@ -23,6 +23,13 @@
 		AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */; };
 		AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */; };
 		AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */; };
+		AEBBB08923C8AAAD0051A359 /* CacheSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08823C8AAAD0051A359 /* CacheSaver.swift */; };
+		AEBBB08C23C8AADA0051A359 /* AudioRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08B23C8AADA0051A359 /* AudioRealm.swift */; };
+		AEBBB08E23C8ABA20051A359 /* CacheFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08D23C8ABA20051A359 /* CacheFileManager.swift */; };
+		AEBBB09023C8ABC60051A359 /* CacheFileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08F23C8ABC60051A359 /* CacheFileClient.swift */; };
+		AEBBB09323C8B46F0051A359 /* AudioFileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB09223C8B46F0051A359 /* AudioFileSaver.swift */; };
+		AEBBB09623C8B5A00051A359 /* FileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB09523C8B5A00051A359 /* FileSystemManager.swift */; };
+		AEBBB09823C8BD780051A359 /* AudioChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB09723C8BD780051A359 /* AudioChanger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDownloader.swift; sourceTree = "<group>"; };
 		AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDownloadClient.swift; sourceTree = "<group>"; };
 		AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDownloadClient.swift; sourceTree = "<group>"; };
+		AEBBB08823C8AAAD0051A359 /* CacheSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSaver.swift; sourceTree = "<group>"; };
+		AEBBB08B23C8AADA0051A359 /* AudioRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRealm.swift; sourceTree = "<group>"; };
+		AEBBB08D23C8ABA20051A359 /* CacheFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFileManager.swift; sourceTree = "<group>"; };
+		AEBBB08F23C8ABC60051A359 /* CacheFileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFileClient.swift; sourceTree = "<group>"; };
+		AEBBB09223C8B46F0051A359 /* AudioFileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileSaver.swift; sourceTree = "<group>"; };
+		AEBBB09523C8B5A00051A359 /* FileSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManager.swift; sourceTree = "<group>"; };
+		AEBBB09723C8BD780051A359 /* AudioChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioChanger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,8 @@
 				AE689B5523C7473200323583 /* AudioLoader.swift */,
 				AEBBB06523C758640051A359 /* AudioSaver.swift */,
 				AEBBB07323C7703B0051A359 /* AudioDownloader.swift */,
+				AEBBB09223C8B46F0051A359 /* AudioFileSaver.swift */,
+				AEBBB09723C8BD780051A359 /* AudioChanger.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -135,9 +151,8 @@
 		AEBBB06423C758130051A359 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				AEBBB06723C758C00051A359 /* CacheManager.swift */,
-				AEBBB06E23C75E700051A359 /* RealmManager.swift */,
-				AEBBB07023C760EF0051A359 /* Object+Ext.swift */,
+				AEBBB08723C8AA1E0051A359 /* AudioFile */,
+				AEBBB08623C8AA080051A359 /* AudioModel */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -161,6 +176,44 @@
 				AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */,
 			);
 			path = AudioFile;
+			sourceTree = "<group>";
+		};
+		AEBBB08623C8AA080051A359 /* AudioModel */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBB08A23C8AAC40051A359 /* Realm */,
+				AEBBB06723C758C00051A359 /* CacheManager.swift */,
+				AEBBB08823C8AAAD0051A359 /* CacheSaver.swift */,
+			);
+			path = AudioModel;
+			sourceTree = "<group>";
+		};
+		AEBBB08723C8AA1E0051A359 /* AudioFile */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBB09423C8B5830051A359 /* FileSystem */,
+				AEBBB08D23C8ABA20051A359 /* CacheFileManager.swift */,
+				AEBBB08F23C8ABC60051A359 /* CacheFileClient.swift */,
+			);
+			path = AudioFile;
+			sourceTree = "<group>";
+		};
+		AEBBB08A23C8AAC40051A359 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBB07023C760EF0051A359 /* Object+Ext.swift */,
+				AEBBB06E23C75E700051A359 /* RealmManager.swift */,
+				AEBBB08B23C8AADA0051A359 /* AudioRealm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		AEBBB09423C8B5830051A359 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBB09523C8B5A00051A359 /* FileSystemManager.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,13 +335,20 @@
 				AE689B5923C7482A00323583 /* RemoteLoader.swift in Sources */,
 				AEBBB06F23C75E700051A359 /* RealmManager.swift in Sources */,
 				AE689B5B23C756D900323583 /* RemoteLoaderMapper.swift in Sources */,
+				AEBBB08E23C8ABA20051A359 /* CacheFileManager.swift in Sources */,
+				AEBBB08C23C8AADA0051A359 /* AudioRealm.swift in Sources */,
 				AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */,
+				AEBBB09323C8B46F0051A359 /* AudioFileSaver.swift in Sources */,
+				AEBBB09823C8BD780051A359 /* AudioChanger.swift in Sources */,
+				AEBBB09023C8ABC60051A359 /* CacheFileClient.swift in Sources */,
 				AEBBB06623C758640051A359 /* AudioSaver.swift in Sources */,
 				AEBBB07423C7703B0051A359 /* AudioDownloader.swift in Sources */,
 				AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */,
 				AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */,
 				AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */,
 				AE689B5D23C756F300323583 /* HTTPClient.swift in Sources */,
+				AEBBB09623C8B5A00051A359 /* FileSystemManager.swift in Sources */,
+				AEBBB08923C8AAAD0051A359 /* CacheSaver.swift in Sources */,
 				AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */,
 				AE689B5623C7473200323583 /* AudioLoader.swift in Sources */,
 				AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */,

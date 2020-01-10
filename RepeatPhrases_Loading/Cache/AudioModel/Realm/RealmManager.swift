@@ -7,19 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
-
-@objcMembers final class AudioRealm: Object {
-    dynamic var id = 0
-    dynamic var text = ""
-    dynamic var audioPath = "" // аудио будет храниться в файловой системе в /audio/<ID>.mp3
-    dynamic var nextRepetition: TimeInterval = 0.0 // время когда нужно след раз повторить
-    dynamic var shownCount = 0 // кол-во показов при удачном ответе, если пользователь ошибается становится опять 0
-    dynamic var isDeleted = false
-    dynamic var isDownloaded = false
-    
-    override static func primaryKey() -> String? { return "id" }
-}
 
 struct RealmManager: CacheSaver {
     func save(_ items: [LoadedAudio], completion: (Result<Void, Error>) -> Void) {
@@ -39,6 +26,15 @@ struct RealmManager: CacheSaver {
             completion(.failure(error))
         }
     }
+    func markAudioDownloaded(id: Int, withFileName: String) {
+        do {
+            guard let audio: AudioRealm = try AudioRealm.findById(id) else { return }
+            audio.isDownloaded = true
+            audio.audioFileName = withFileName
+            try AudioRealm.upsert(audio)
+        } catch { }
+    }
+
 }
 
 extension Array where Element == LoadedAudio {

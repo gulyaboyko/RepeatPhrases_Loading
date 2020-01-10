@@ -24,8 +24,8 @@ struct CacheManager: AudioSaver {
     }
 }
 
-protocol CacheSaver {
-    func save(_ items: [LoadedAudio], completion: (Result<Void, Error>) -> Void)
-    func getNotDownloadedAudio(completion: (Result<[LoadedAudio], Error>) -> Void)
+extension CacheManager: AudioChanger {
+    func audioWasDownloaded(id: Int, withFileName: String) {
+        cacheSaver.markAudioDownloaded(id: id, withFileName: withFileName)
+    }
 }
-
