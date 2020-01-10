@@ -19,6 +19,10 @@
 		AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* RealmSwift */; };
 		AEBBB06F23C75E700051A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06E23C75E700051A359 /* RealmManager.swift */; };
 		AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07023C760EF0051A359 /* Object+Ext.swift */; };
+		AEBBB07423C7703B0051A359 /* AudioDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07323C7703B0051A359 /* AudioDownloader.swift */; };
+		AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */; };
+		AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */; };
+		AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		AEBBB06723C758C00051A359 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		AEBBB06E23C75E700051A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEBBB07023C760EF0051A359 /* Object+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Ext.swift"; sourceTree = "<group>"; };
+		AEBBB07323C7703B0051A359 /* AudioDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDownloader.swift; sourceTree = "<group>"; };
+		AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDownloader.swift; sourceTree = "<group>"; };
+		AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDownloadClient.swift; sourceTree = "<group>"; };
+		AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDownloadClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 			children = (
 				AE689B5523C7473200323583 /* AudioLoader.swift */,
 				AEBBB06523C758640051A359 /* AudioSaver.swift */,
+				AEBBB07323C7703B0051A359 /* AudioDownloader.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -117,10 +126,8 @@
 		AE689B5723C7480E00323583 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AE689B5823C7482A00323583 /* RemoteLoader.swift */,
-				AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */,
-				AE689B5C23C756F300323583 /* HTTPClient.swift */,
-				AEBBB06223C757CF0051A359 /* URLSessionClient.swift */,
+				AEBBB07E23C8A6BD0051A359 /* AudioFile */,
+				AEBBB07D23C8A6AB0051A359 /* AudioModel */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -133,6 +140,27 @@
 				AEBBB07023C760EF0051A359 /* Object+Ext.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		AEBBB07D23C8A6AB0051A359 /* AudioModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE689B5823C7482A00323583 /* RemoteLoader.swift */,
+				AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */,
+				AE689B5C23C756F300323583 /* HTTPClient.swift */,
+				AEBBB06223C757CF0051A359 /* URLSessionClient.swift */,
+			);
+			path = AudioModel;
+			sourceTree = "<group>";
+		};
+		AEBBB07E23C8A6BD0051A359 /* AudioFile */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */,
+				AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */,
+				AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */,
+			);
+			path = AudioFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +284,12 @@
 				AE689B5B23C756D900323583 /* RemoteLoaderMapper.swift in Sources */,
 				AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */,
 				AEBBB06623C758640051A359 /* AudioSaver.swift in Sources */,
+				AEBBB07423C7703B0051A359 /* AudioDownloader.swift in Sources */,
+				AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */,
+				AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */,
 				AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */,
 				AE689B5D23C756F300323583 /* HTTPClient.swift in Sources */,
+				AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */,
 				AE689B5623C7473200323583 /* AudioLoader.swift in Sources */,
 				AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */,
 			);
