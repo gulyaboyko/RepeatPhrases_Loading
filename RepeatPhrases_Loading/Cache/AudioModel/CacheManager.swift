@@ -15,11 +15,11 @@ struct CacheManager: AudioSaver {
         self.cacheSaver = cacheSaver
     }
     
-    func save(_ items: [LoadedAudio], completion: (Result<Void, Error>) -> Void) {
+    func save(_ items: [LoadedAudio], completion: @escaping (Result<Void, Error>) -> Void) {
         cacheSaver.save(items, completion: completion)
     }
     
-    func getNotDownloadedAudio(completion: (Result<[LoadedAudio], Error>) -> Void) {
+    func getNotDownloadedAudio(completion: @escaping (Result<[LoadedAudio], Error>) -> Void) {
         cacheSaver.getNotDownloadedAudio(completion: completion)
     }
 }

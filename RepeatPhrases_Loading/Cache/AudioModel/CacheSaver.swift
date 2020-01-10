@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CacheSaver {
-    func save(_ items: [LoadedAudio], completion: (Result<Void, Error>) -> Void)
-    func getNotDownloadedAudio(completion: (Result<[LoadedAudio], Error>) -> Void)
+    func save(_ items: [LoadedAudio], completion: @escaping (Result<Void, Error>) -> Void)
+    func getNotDownloadedAudio(completion: @escaping (Result<[LoadedAudio], Error>) -> Void)
     func markAudioDownloaded(id: Int, withFileName: String)
 }
