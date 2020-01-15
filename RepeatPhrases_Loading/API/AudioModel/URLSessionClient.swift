@@ -9,17 +9,15 @@
 import Foundation
 
 struct URLSessionClient: HTTPClient {
-    private var url: URL
     private var session: URLSession
     
-    init(url: URL, session: URLSession = .shared) {
-        self.url = url
+    init(session: URLSession = .shared) {
         self.session = session
     }
     
     private static var unexpectedError = NSError(domain: "", code: 100, userInfo: nil)
     
-    func get(completion: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void) {
+    func get(url: URL, completion: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void) {
         session.dataTask(with: url) { (data, urlResponse, error) in
             if let error = error {
                 completion(.failure(error))

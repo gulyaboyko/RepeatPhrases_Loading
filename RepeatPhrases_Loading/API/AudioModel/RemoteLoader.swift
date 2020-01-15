@@ -18,7 +18,7 @@ struct RemoteLoader: AudioLoader {
     }
     
     func get(completion: @escaping (Result<[LoadedAudio], Error>) -> Void) {
-        client.get { result in
+        client.get(url: url) { result in
             switch result {
             case let .success(data, response):
                 completion(RemoteLoaderMapper.map(data: data, response: response))

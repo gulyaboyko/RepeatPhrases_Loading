@@ -9,17 +9,15 @@
 import Foundation
 
 struct URLSessionDownloadClient: HTTPDownloadClient {
-    private var url: URL
     private var session: URLSession
     
-    init(url: URL, session: URLSession = .shared) {
-        self.url = url
+    init(session: URLSession = .shared) {
         self.session = session
     }
     
     private static var unexpectedError = NSError(domain: "", code: 100, userInfo: nil)
     
-    func download(completion: @escaping (Result<(URL, HTTPURLResponse), Error>) -> Void) {
+    func download(url: URL, completion: @escaping (Result<(URL, HTTPURLResponse), Error>) -> Void) {
         session.downloadTask(with: url) { (url, urlResponse, error) in
             if let error = error {
                 completion(.failure(error))
@@ -30,4 +28,22 @@ struct URLSessionDownloadClient: HTTPDownloadClient {
             }
         }.resume()
     }
+    
+    func save(from: URL, fileName: String) -> Result<Void, Error> {
+        do {
+            
+            var audioDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            audioDirectoryURL.appendPathComponent("audio", isDirectory: true)
+            var isDir = ObjCBool(true)
+            if FileManager.default.fileExists(atPath: audioDirectoryURL.absoluteString, isDirectory: &isDir) {
+                try FileManager.default.createDirectory(at: audioDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+            }
+            let destinationURL = audioDirectoryURL.appendingPathComponent(fileName)
+            try FileManager.default.moveItem(at: from, to: destinationURL)
+            return .success(())
+        } catch let error {
+            return .failure(error)
+        }
+    }
+    
 }

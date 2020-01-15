@@ -15,8 +15,8 @@ struct CacheFileManager: AudioFileSaver {
         self.client = client
     }
     
-    func save(from: URL, completion: @escaping (Result<String, Error>) -> Void) {
-        client.save(from: from, completion: completion)
+    func save(from: URL, withFileName: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        client.save(from: from, withFileName: withFileName, completion: completion)
     }
     
 }

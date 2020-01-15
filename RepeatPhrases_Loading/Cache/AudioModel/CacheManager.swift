@@ -25,7 +25,7 @@ struct CacheManager: AudioSaver {
 }
 
 extension CacheManager: AudioChanger {
-    func audioWasDownloaded(id: Int, withFileName: String) {
-        cacheSaver.markAudioDownloaded(id: id, withFileName: withFileName)
+    func audioWasDownloaded(id: String) {
+        cacheSaver.markAudioDownloaded(id: id)
     }
 }

@@ -10,5 +10,5 @@ import Foundation
 
 protocol AudioFileSaver {
     // URL for temporary place
-    func save(from: URL, completion: @escaping (Result<String, Error>) -> Void)
+    func save(from: URL, withFileName: String, completion: @escaping (Result<Void, Error>) -> Void)
 }

@@ -9,19 +9,18 @@
 import Foundation
 
 struct RemoteDownloader: AudioDownloader {
-    private var url: URL
     private var client: HTTPDownloadClient
     
-    init(url: URL, client: HTTPDownloadClient) {
+    init(client: HTTPDownloadClient) {
         self.client = client
-        self.url = url
     }
 
     private static var statusCodeError = NSError(domain: "", code: 100, userInfo: nil)
     private var OK_CODE = 200
     
     func download(filePath: String, completion: @escaping (Result<URL, Error>) -> Void) {
-        client.download { result in
+        guard let url = URL(string: filePath) else { return }
+        client.download(url: url) { result in
             switch result {
             case let .success(url, response):
                 completion(self.map(url: url, response: response))

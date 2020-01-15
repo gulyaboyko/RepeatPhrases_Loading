@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AudioChanger {
-    func audioWasDownloaded(id: Int, withFileName: String)
+    func audioWasDownloaded(id: String)
 }

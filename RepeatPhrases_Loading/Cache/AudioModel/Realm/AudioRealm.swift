@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 @objcMembers final class AudioRealm: Object {
-    dynamic var id = 0
+    dynamic var id = ""
     dynamic var text = ""
     dynamic var audioPath = ""
     dynamic var audioFileName = ""

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HTTPDownloadClient {
-    func download(completion: @escaping (Result<(URL, HTTPURLResponse), Error>) -> Void)
+    func download(url: URL, completion: @escaping (Result<(URL, HTTPURLResponse), Error>) -> Void)
 }

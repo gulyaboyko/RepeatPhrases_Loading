@@ -9,9 +9,10 @@
 import Foundation
 
 struct LoadedAudio {
-    var id: Int
+    var id: String
     var text: String
-    var audioPath: String
+    var audioURLPath: String
+    var audioFileName: String
 }
 
 protocol AudioLoader {

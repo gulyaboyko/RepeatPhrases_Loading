@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HTTPClient {
-    func get(completion: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void)
+    func get(url: URL, completion: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void)
 }

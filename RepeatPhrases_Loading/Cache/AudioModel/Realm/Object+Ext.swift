@@ -40,8 +40,9 @@ extension Object {
     }
     
     // Search by ID
-    static func findById<T: Object>(_ id: Int) throws -> T? {
-        return try find("id == \(id)").first
+    static func findById<T: Object>(_ id: String) throws -> T? {
+        let realm = try Realm()
+        return realm.object(ofType: T.self, forPrimaryKey: id)?.detached()
     }
     
     // Insert or update model

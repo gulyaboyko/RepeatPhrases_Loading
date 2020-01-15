@@ -13,6 +13,7 @@ struct RealmManager: CacheSaver {
     
     func save(_ items: [LoadedAudio], completion: @escaping (Result<Void, Error>) -> Void) {
         queue.async {
+            try? AudioRealm.deleteAll()
             let realmObjects: [AudioRealm] = items.toRealmObject()
             do {
                 try AudioRealm.upsert(realmObjects)
@@ -32,12 +33,11 @@ struct RealmManager: CacheSaver {
             }
         }
     }
-    func markAudioDownloaded(id: Int, withFileName: String) {
+    func markAudioDownloaded(id: String) {
         queue.async {
             do {
                 guard let audio: AudioRealm = try AudioRealm.findById(id) else { return }
                 audio.isDownloaded = true
-                audio.audioFileName = withFileName
                 try AudioRealm.upsert(audio)
             } catch { }
         }
@@ -51,7 +51,8 @@ extension Array where Element == LoadedAudio {
             let audioRealm = AudioRealm()
             audioRealm.id = localAudio.id
             audioRealm.text = localAudio.text
-            audioRealm.audioPath = localAudio.audioPath
+            audioRealm.audioPath = localAudio.audioURLPath
+            audioRealm.audioFileName = localAudio.audioFileName
             return audioRealm
         }
     }
@@ -59,6 +60,6 @@ extension Array where Element == LoadedAudio {
 
 extension Array where Element == AudioRealm {
     func toModels() -> [LoadedAudio] {
-        return map { LoadedAudio(id: $0.id, text: $0.text, audioPath: $0.audioPath)}
+        return map { LoadedAudio(id: $0.id, text: $0.text, audioURLPath: $0.audioPath, audioFileName: $0.audioFileName)}
     }
 }
