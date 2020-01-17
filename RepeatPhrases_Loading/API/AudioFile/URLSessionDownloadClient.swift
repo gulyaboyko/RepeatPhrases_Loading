@@ -29,21 +29,4 @@ struct URLSessionDownloadClient: HTTPDownloadClient {
         }.resume()
     }
     
-    func save(from: URL, fileName: String) -> Result<Void, Error> {
-        do {
-            
-            var audioDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            audioDirectoryURL.appendPathComponent("audio", isDirectory: true)
-            var isDir = ObjCBool(true)
-            if FileManager.default.fileExists(atPath: audioDirectoryURL.absoluteString, isDirectory: &isDir) {
-                try FileManager.default.createDirectory(at: audioDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-            }
-            let destinationURL = audioDirectoryURL.appendingPathComponent(fileName)
-            try FileManager.default.moveItem(at: from, to: destinationURL)
-            return .success(())
-        } catch let error {
-            return .failure(error)
-        }
-    }
-    
 }

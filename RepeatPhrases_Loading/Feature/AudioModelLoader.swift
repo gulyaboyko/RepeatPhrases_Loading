@@ -15,6 +15,12 @@ struct LoadedAudio {
     var audioFileName: String
 }
 
-protocol AudioLoader {
+protocol AudioModelLoader {
     func get(completion: @escaping (Result<[LoadedAudio], Error>) -> Void)
 }
+
+protocol AudioLoader {
+    func download(completion: @escaping (Result<Void, Error>) -> Void)
+}
+
+

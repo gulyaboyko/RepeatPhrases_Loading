@@ -19,7 +19,7 @@
 		AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* RealmSwift */; };
 		AEBBB06F23C75E700051A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06E23C75E700051A359 /* RealmManager.swift */; };
 		AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07023C760EF0051A359 /* Object+Ext.swift */; };
-		AEBBB07423C7703B0051A359 /* AudioDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07323C7703B0051A359 /* AudioDownloader.swift */; };
+		AEBBB07423C7703B0051A359 /* AudioFileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07323C7703B0051A359 /* AudioFileDownloader.swift */; };
 		AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */; };
 		AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */; };
 		AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */; };
@@ -56,7 +56,7 @@
 		AEBBB06723C758C00051A359 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		AEBBB06E23C75E700051A359 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEBBB07023C760EF0051A359 /* Object+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Ext.swift"; sourceTree = "<group>"; };
-		AEBBB07323C7703B0051A359 /* AudioDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDownloader.swift; sourceTree = "<group>"; };
+		AEBBB07323C7703B0051A359 /* AudioFileDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileDownloader.swift; sourceTree = "<group>"; };
 		AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDownloader.swift; sourceTree = "<group>"; };
 		AEBBB08123C8A7810051A359 /* HTTPDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDownloadClient.swift; sourceTree = "<group>"; };
 		AEBBB08323C8A7AB0051A359 /* URLSessionDownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDownloadClient.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			children = (
 				AE689B5523C7473200323583 /* AudioLoader.swift */,
 				AEBBB06523C758640051A359 /* AudioSaver.swift */,
-				AEBBB07323C7703B0051A359 /* AudioDownloader.swift */,
+				AEBBB07323C7703B0051A359 /* AudioFileDownloader.swift */,
 				AEBBB09223C8B46F0051A359 /* AudioFileSaver.swift */,
 				AEBBB09723C8BD780051A359 /* AudioChanger.swift */,
 			);
@@ -342,7 +342,7 @@
 				AEBBB09823C8BD780051A359 /* AudioChanger.swift in Sources */,
 				AEBBB09023C8ABC60051A359 /* CacheFileClient.swift in Sources */,
 				AEBBB06623C758640051A359 /* AudioSaver.swift in Sources */,
-				AEBBB07423C7703B0051A359 /* AudioDownloader.swift in Sources */,
+				AEBBB07423C7703B0051A359 /* AudioFileDownloader.swift in Sources */,
 				AEBBB08223C8A7810051A359 /* HTTPDownloadClient.swift in Sources */,
 				AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */,
 				AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */,

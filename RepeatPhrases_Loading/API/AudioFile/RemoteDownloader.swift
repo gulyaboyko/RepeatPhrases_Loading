@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RemoteDownloader: AudioDownloader {
+struct RemoteDownloader: AudioFileDownloader {
     private var client: HTTPDownloadClient
     
     init(client: HTTPDownloadClient) {

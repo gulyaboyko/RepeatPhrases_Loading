@@ -13,11 +13,15 @@ struct RealmManager: CacheSaver {
     
     func save(_ items: [LoadedAudio], completion: @escaping (Result<Void, Error>) -> Void) {
         queue.async {
-            try? AudioRealm.deleteAll()
             let realmObjects: [AudioRealm] = items.toRealmObject()
             do {
-                try AudioRealm.upsert(realmObjects)
-                completion(.success(()))
+                try realmObjects.enumerated().forEach { (index, realmObject) in
+                    let existObject: AudioRealm? = try? AudioRealm.findById(realmObject.id)
+                    if existObject == nil {
+                        try AudioRealm.upsert(realmObject)
+                    }
+                    if index == realmObjects.count - 1 { completion(.success(())) }
+                }
             } catch let error {
                 completion(.failure(error))
             }

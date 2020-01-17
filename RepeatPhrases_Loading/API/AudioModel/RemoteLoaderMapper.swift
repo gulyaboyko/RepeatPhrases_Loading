@@ -24,9 +24,13 @@ struct RemoteLoaderMapper {
         var fields: Fields
         var loadedAudio: LoadedAudio {
             let id = self.name.components(separatedBy: "/").last!
+            var urlPart = "https://firebasestorage.googleapis.com/v0/b/espresso-app-a33f5.appspot.com/o/All-Advanced-Phrases%2F"
+            if self.fields.filename.stringValue.contains("Beginner") {
+                urlPart = urlPart.replacingOccurrences(of: "Advanced", with: "Beginner")
+            }
             return LoadedAudio(id: id,
                                text: self.fields.text.stringValue,
-                               audioURLPath: "https://firebasestorage.googleapis.com/v0/b/espresso-app-a33f5.appspot.com/o/All-Advanced-Phrases%2F" + self.fields.filename.stringValue + "?alt=media",
+                               audioURLPath: urlPart + self.fields.filename.stringValue + "?alt=media",
                                audioFileName: id + ".mp3")
         }
     }

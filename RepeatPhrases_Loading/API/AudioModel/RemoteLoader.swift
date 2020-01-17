@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RemoteLoader: AudioLoader {
+struct RemoteLoader: AudioModelLoader {
     private var url: URL
     private var client: HTTPClient
     

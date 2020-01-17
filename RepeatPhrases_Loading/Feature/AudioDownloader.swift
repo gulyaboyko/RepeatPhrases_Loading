@@ -8,7 +8,14 @@
 
 import Foundation
 
-protocol AudioDownloader {
+protocol AudioFileDownloader {
     // URL for temporary place
     func download(filePath: String, completion: @escaping (Result<URL, Error>) -> Void)
+}
+struct AudioDownloaderSuccessResult {
+    var successLoadedFiles: Int
+    var failedLoadedFiles: Int
+}
+protocol AudioDownloader {
+    func downloadAudios(completion: @escaping (Result<AudioDownloaderSuccessResult, Error>) -> Void)
 }
