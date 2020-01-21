@@ -41,6 +41,7 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'Realm'
   spec.dependency 'RealmSwift'
+  spec.dependency 'Firebase'
   spec.dependency 'Firebase/Core'
   spec.dependency 'Firebase/Firestore'
   spec.dependency 'FirebaseFirestoreSwift'
