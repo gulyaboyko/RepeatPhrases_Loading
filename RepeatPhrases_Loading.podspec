@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files = "RepeatPhrases_Loading"
+  spec.source_files = "RepeatPhrases_Loading/**/*.{swift,h,m}"
 
   spec.swift_version = "5.0"
 
