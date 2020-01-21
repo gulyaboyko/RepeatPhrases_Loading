@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0622AC50C148796F8CCF152F /* Pods_RepeatPhrases_LoadingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66613F895F8CD0B3485D195 /* Pods_RepeatPhrases_LoadingTests.framework */; };
+		31014B60783AB8515AB12DD0 /* Pods_RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F404038EA83615012DF03CED /* Pods_RepeatPhrases_Loading.framework */; };
 		AE3BCF8623D72D8A0029DF7E /* AudioModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BCF8523D72D8A0029DF7E /* AudioModelLoader.swift */; };
 		AE3BCF8823D72D960029DF7E /* AudioDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BCF8723D72D960029DF7E /* AudioDownloader.swift */; };
 		AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */; };
@@ -16,8 +18,8 @@
 		AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06223C757CF0051A359 /* URLSessionClient.swift */; };
 		AEBBB06623C758640051A359 /* AudioSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06523C758640051A359 /* AudioSaver.swift */; };
 		AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06723C758C00051A359 /* CacheManager.swift */; };
-		AEBBB06B23C75DFD0051A359 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06A23C75DFD0051A359 /* Realm */; };
-		AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* RealmSwift */; };
+		AEBBB06B23C75DFD0051A359 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */; };
+		AEBBB06D23C75DFD0051A359 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */; };
 		AEBBB06F23C75E700051A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06E23C75E700051A359 /* RealmManager.swift */; };
 		AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07023C760EF0051A359 /* Object+Ext.swift */; };
 		AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0447D927C3A3EC899C456002 /* Pods-RepeatPhrases_Loading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepeatPhrases_Loading.release.xcconfig"; path = "Target Support Files/Pods-RepeatPhrases_Loading/Pods-RepeatPhrases_Loading.release.xcconfig"; sourceTree = "<group>"; };
+		7833AE53BE2847ACAF593857 /* Pods-RepeatPhrases_Loading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepeatPhrases_Loading.debug.xcconfig"; path = "Target Support Files/Pods-RepeatPhrases_Loading/Pods-RepeatPhrases_Loading.debug.xcconfig"; sourceTree = "<group>"; };
+		87F4C9B05AACAE98ED5B9326 /* Pods-RepeatPhrases_LoadingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepeatPhrases_LoadingTests.release.xcconfig"; path = "Target Support Files/Pods-RepeatPhrases_LoadingTests/Pods-RepeatPhrases_LoadingTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE3BCF8523D72D8A0029DF7E /* AudioModelLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModelLoader.swift; sourceTree = "<group>"; };
 		AE3BCF8723D72D960029DF7E /* AudioDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDownloader.swift; sourceTree = "<group>"; };
 		AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepeatPhrases_Loading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +72,9 @@
 		AEBBB09223C8B46F0051A359 /* AudioFileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileSaver.swift; sourceTree = "<group>"; };
 		AEBBB09523C8B5A00051A359 /* FileSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManager.swift; sourceTree = "<group>"; };
 		AEBBB09723C8BD780051A359 /* AudioChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioChanger.swift; sourceTree = "<group>"; };
+		E66613F895F8CD0B3485D195 /* Pods_RepeatPhrases_LoadingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepeatPhrases_LoadingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F404038EA83615012DF03CED /* Pods_RepeatPhrases_Loading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepeatPhrases_Loading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC0581DB51F8C3A1E384F55 /* Pods-RepeatPhrases_LoadingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepeatPhrases_LoadingTests.debug.xcconfig"; path = "Target Support Files/Pods-RepeatPhrases_LoadingTests/Pods-RepeatPhrases_LoadingTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */,
-				AEBBB06B23C75DFD0051A359 /* Realm in Frameworks */,
+				AEBBB06D23C75DFD0051A359 /* BuildFile in Frameworks */,
+				AEBBB06B23C75DFD0051A359 /* BuildFile in Frameworks */,
+				31014B60783AB8515AB12DD0 /* Pods_RepeatPhrases_Loading.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,18 +93,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */,
+				0622AC50C148796F8CCF152F /* Pods_RepeatPhrases_LoadingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D842BA06441A751CE4282BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7833AE53BE2847ACAF593857 /* Pods-RepeatPhrases_Loading.debug.xcconfig */,
+				0447D927C3A3EC899C456002 /* Pods-RepeatPhrases_Loading.release.xcconfig */,
+				FCC0581DB51F8C3A1E384F55 /* Pods-RepeatPhrases_LoadingTests.debug.xcconfig */,
+				87F4C9B05AACAE98ED5B9326 /* Pods-RepeatPhrases_LoadingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE689B3023C7469400323583 = {
 			isa = PBXGroup;
 			children = (
 				AE689B3C23C7469400323583 /* RepeatPhrases_Loading */,
 				AE689B4723C7469400323583 /* RepeatPhrases_LoadingTests */,
 				AE689B3B23C7469400323583 /* Products */,
+				1D842BA06441A751CE4282BE /* Pods */,
+				DB874064AE7A7595F098F03B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +240,15 @@
 			path = FileSystem;
 			sourceTree = "<group>";
 		};
+		DB874064AE7A7595F098F03B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F404038EA83615012DF03CED /* Pods_RepeatPhrases_Loading.framework */,
+				E66613F895F8CD0B3485D195 /* Pods_RepeatPhrases_LoadingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -233,6 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE689B4E23C7469400323583 /* Build configuration list for PBXNativeTarget "RepeatPhrases_Loading" */;
 			buildPhases = (
+				E90C415646A74ACC5CB0F0DB /* [CP] Check Pods Manifest.lock */,
 				AE689B3523C7469400323583 /* Headers */,
 				AE689B3623C7469400323583 /* Sources */,
 				AE689B3723C7469400323583 /* Frameworks */,
@@ -244,8 +278,8 @@
 			);
 			name = RepeatPhrases_Loading;
 			packageProductDependencies = (
-				AEBBB06A23C75DFD0051A359 /* Realm */,
-				AEBBB06C23C75DFD0051A359 /* RealmSwift */,
+				AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */,
+				AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */,
 			);
 			productName = RepeatPhrases_Loading;
 			productReference = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */;
@@ -255,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE689B5123C7469400323583 /* Build configuration list for PBXNativeTarget "RepeatPhrases_LoadingTests" */;
 			buildPhases = (
+				28BE56DED0108DE59B8A795D /* [CP] Check Pods Manifest.lock */,
 				AE689B3F23C7469400323583 /* Sources */,
 				AE689B4023C7469400323583 /* Frameworks */,
 				AE689B4123C7469400323583 /* Resources */,
@@ -298,7 +333,7 @@
 			);
 			mainGroup = AE689B3023C7469400323583;
 			packageReferences = (
-				AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = AE689B3B23C7469400323583 /* Products */;
 			projectDirPath = "";
@@ -326,6 +361,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28BE56DED0108DE59B8A795D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RepeatPhrases_LoadingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90C415646A74ACC5CB0F0DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RepeatPhrases_Loading-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE689B3623C7469400323583 /* Sources */ = {
@@ -495,6 +577,7 @@
 		};
 		AE689B4F23C7469400323583 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7833AE53BE2847ACAF593857 /* Pods-RepeatPhrases_Loading.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +605,7 @@
 		};
 		AE689B5023C7469400323583 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0447D927C3A3EC899C456002 /* Pods-RepeatPhrases_Loading.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +632,7 @@
 		};
 		AE689B5223C7469400323583 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC0581DB51F8C3A1E384F55 /* Pods-RepeatPhrases_LoadingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +652,7 @@
 		};
 		AE689B5323C7469400323583 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F4C9B05AACAE98ED5B9326 /* Pods-RepeatPhrases_LoadingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -617,7 +703,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -628,14 +714,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AEBBB06A23C75DFD0051A359 /* Realm */ = {
+		AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		AEBBB06C23C75DFD0051A359 /* RealmSwift */ = {
+		AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
