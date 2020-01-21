@@ -11,6 +11,7 @@
 		31014B60783AB8515AB12DD0 /* Pods_RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F404038EA83615012DF03CED /* Pods_RepeatPhrases_Loading.framework */; };
 		AE3BCF8623D72D8A0029DF7E /* AudioModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BCF8523D72D8A0029DF7E /* AudioModelLoader.swift */; };
 		AE3BCF8823D72D960029DF7E /* AudioDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BCF8723D72D960029DF7E /* AudioDownloader.swift */; };
+		AE3BCF8D23D7408D0029DF7E /* FirestoreHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BCF8C23D7408D0029DF7E /* FirestoreHTTPClient.swift */; };
 		AE689B4423C7469400323583 /* RepeatPhrases_Loading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */; };
 		AE689B5923C7482A00323583 /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5823C7482A00323583 /* RemoteLoader.swift */; };
 		AE689B5B23C756D900323583 /* RemoteLoaderMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */; };
@@ -18,8 +19,8 @@
 		AEBBB06323C757CF0051A359 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06223C757CF0051A359 /* URLSessionClient.swift */; };
 		AEBBB06623C758640051A359 /* AudioSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06523C758640051A359 /* AudioSaver.swift */; };
 		AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06723C758C00051A359 /* CacheManager.swift */; };
-		AEBBB06B23C75DFD0051A359 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */; };
-		AEBBB06D23C75DFD0051A359 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */; };
+		AEBBB06B23C75DFD0051A359 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06A23C75DFD0051A359 /* Realm */; };
+		AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEBBB06C23C75DFD0051A359 /* RealmSwift */; };
 		AEBBB06F23C75E700051A359 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB06E23C75E700051A359 /* RealmManager.swift */; };
 		AEBBB07123C760EF0051A359 /* Object+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07023C760EF0051A359 /* Object+Ext.swift */; };
 		AEBBB08023C8A71E0051A359 /* RemoteDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBB07F23C8A71E0051A359 /* RemoteDownloader.swift */; };
@@ -50,6 +51,7 @@
 		87F4C9B05AACAE98ED5B9326 /* Pods-RepeatPhrases_LoadingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepeatPhrases_LoadingTests.release.xcconfig"; path = "Target Support Files/Pods-RepeatPhrases_LoadingTests/Pods-RepeatPhrases_LoadingTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE3BCF8523D72D8A0029DF7E /* AudioModelLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModelLoader.swift; sourceTree = "<group>"; };
 		AE3BCF8723D72D960029DF7E /* AudioDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDownloader.swift; sourceTree = "<group>"; };
+		AE3BCF8C23D7408D0029DF7E /* FirestoreHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreHTTPClient.swift; sourceTree = "<group>"; };
 		AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepeatPhrases_Loading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE689B3E23C7469400323583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE689B4323C7469400323583 /* RepeatPhrases_LoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepeatPhrases_LoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEBBB06D23C75DFD0051A359 /* BuildFile in Frameworks */,
-				AEBBB06B23C75DFD0051A359 /* BuildFile in Frameworks */,
+				AEBBB06D23C75DFD0051A359 /* RealmSwift in Frameworks */,
+				AEBBB06B23C75DFD0051A359 /* Realm in Frameworks */,
 				31014B60783AB8515AB12DD0 /* Pods_RepeatPhrases_Loading.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +110,6 @@
 				FCC0581DB51F8C3A1E384F55 /* Pods-RepeatPhrases_LoadingTests.debug.xcconfig */,
 				87F4C9B05AACAE98ED5B9326 /* Pods-RepeatPhrases_LoadingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +189,7 @@
 				AE689B5A23C756D900323583 /* RemoteLoaderMapper.swift */,
 				AE689B5C23C756F300323583 /* HTTPClient.swift */,
 				AEBBB06223C757CF0051A359 /* URLSessionClient.swift */,
+				AE3BCF8C23D7408D0029DF7E /* FirestoreHTTPClient.swift */,
 			);
 			path = AudioModel;
 			sourceTree = "<group>";
@@ -278,8 +280,8 @@
 			);
 			name = RepeatPhrases_Loading;
 			packageProductDependencies = (
-				AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */,
-				AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */,
+				AEBBB06A23C75DFD0051A359 /* Realm */,
+				AEBBB06C23C75DFD0051A359 /* RealmSwift */,
 			);
 			productName = RepeatPhrases_Loading;
 			productReference = AE689B3A23C7469400323583 /* RepeatPhrases_Loading.framework */;
@@ -333,7 +335,7 @@
 			);
 			mainGroup = AE689B3023C7469400323583;
 			packageReferences = (
-				AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */,
+				AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = AE689B3B23C7469400323583 /* Products */;
 			projectDirPath = "";
@@ -430,6 +432,7 @@
 				AEBBB06823C758C00051A359 /* CacheManager.swift in Sources */,
 				AE689B5D23C756F300323583 /* HTTPClient.swift in Sources */,
 				AEBBB09623C8B5A00051A359 /* FileSystemManager.swift in Sources */,
+				AE3BCF8D23D7408D0029DF7E /* FirestoreHTTPClient.swift in Sources */,
 				AE3BCF8823D72D960029DF7E /* AudioDownloader.swift in Sources */,
 				AEBBB08923C8AAAD0051A359 /* CacheSaver.swift in Sources */,
 				AEBBB08423C8A7AB0051A359 /* URLSessionDownloadClient.swift in Sources */,
@@ -703,7 +706,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */ = {
+		AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -714,14 +717,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AEBBB06A23C75DFD0051A359 /* SwiftPackageProductDependency */ = {
+		AEBBB06A23C75DFD0051A359 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */;
+			package = AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
-		AEBBB06C23C75DFD0051A359 /* SwiftPackageProductDependency */ = {
+		AEBBB06C23C75DFD0051A359 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEBBB06923C75DFD0051A359 /* RemoteSwiftPackageReference */;
+			package = AEBBB06923C75DFD0051A359 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
