@@ -22,6 +22,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios
+  spec.ios.deployment_target = '11.0'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -36,5 +37,6 @@ Pod::Spec.new do |spec|
   spec.source_files = "RepeatPhrases_Loading/**/*.{swift,h,m}"
 
   spec.swift_version = "5.0"
+  spec.static_framework = true
 
 end
